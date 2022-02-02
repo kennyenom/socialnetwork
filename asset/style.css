@@ -1,0 +1,172 @@
+.col-md-9 {
+  margin-left: 9em;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: .8rem .7rem;
+  background-color: #f1f1f1;
+}
+
+.hamburger {
+  display: none;
+}
+
+.cover {
+  background: url("/media/background.jpg");
+  -o-object-position: center;
+     object-position: center;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
+}
+
+.nav-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-item {
+  margin-left: 1rem;
+}
+
+.nav-item a {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.nav-item a:hover {
+  -webkit-text-decoration: underline blue;
+          text-decoration: underline blue;
+}
+
+.nav-logo {
+  text-transform: uppercase;
+}
+
+.nav-logospan {
+  color: cadetblue;
+}
+
+.nav-link {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #475569;
+}
+
+.nav-link:hover {
+  color: #482ff7;
+}
+
+.nav-logo {
+  font-size: 2.1rem;
+  font-weight: bold;
+  color: #482ff7;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    right: -100%;
+    top: 5rem;
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: teal;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    z-index: 990;
+  }
+  .nav-menu.active {
+    right: 0;
+    -webkit-transition: .6s ease-in-out right;
+    transition: .6s ease-in-out right;
+  }
+  .nav-item {
+    margin: .5rem 0;
+    color: white;
+  }
+  .nav-item a {
+    color: white;
+    font-weight: bold;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    -webkit-transform: translateY(8px) rotate(45deg);
+            transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+            transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+/* Add responsiveness - on screens less than 580px wide, display the navbar vertically instead of horizontally */
+@media screen and (max-width: 580px) {
+  #navbar {
+    padding: 20px 10px !important;
+    /* Use !important to make sure that JavaScript doesn't override the padding on small screens */
+  }
+  #navbar a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  #navbar-right {
+    float: none;
+  }
+  .col-md-9 {
+    margin: 0 auto;
+  }
+}
+/*# sourceMappingURL=style.css.map */
